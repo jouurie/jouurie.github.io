@@ -1,0 +1,13 @@
+:root{--rie-cursor-normal:url("assets/cursor-normal-0.cur") 0 0;--rie-cursor-link:url("assets/cursor-link-0.cur") 0 0;}
+@media(any-hover:hover) and (any-pointer:fine){
+html,body{cursor:var(--rie-cursor-normal),auto;}
+:is(a,button,select,summary,label[for],[role="button"],input[type="checkbox"],input[type="radio"]):not(:disabled){cursor:var(--rie-cursor-link),pointer;}
+.directory-window .desktop-titlebar,.mail-titlebar{cursor:var(--rie-cursor-normal),default;}
+}
+@media(any-hover:hover) and (any-pointer:fine){
+html{animation:rie-cursor-normal 0.4s step-end infinite,rie-cursor-link 0.4s step-end infinite;}
+@keyframes rie-cursor-normal{0%{--rie-cursor-normal:url("assets/cursor-normal-0.cur") 0 0;}50%{--rie-cursor-normal:url("assets/cursor-normal-1.cur") 0 0;}100%{--rie-cursor-normal:url("assets/cursor-normal-0.cur") 0 0;}}
+@keyframes rie-cursor-link{0%{--rie-cursor-link:url("assets/cursor-link-0.cur") 0 0;}50%{--rie-cursor-link:url("assets/cursor-link-1.cur") 0 0;}100%{--rie-cursor-link:url("assets/cursor-link-0.cur") 0 0;}}
+}
+@media(prefers-reduced-motion:reduce){html{animation:none}}
+:is(input:not([type="button"]):not([type="submit"]):not([type="checkbox"]):not([type="radio"]),textarea,[contenteditable="true"]){cursor:text}
