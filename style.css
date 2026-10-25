@@ -57,4 +57,4 @@ footer{padding:24px 0 32px;text-align:center;font-size:13px}
 @media print{.cursor-heart{display:none!important}}
 
 /* Match the Tistory mobile brand row without reserving an absent music-controls row. */
-@media(max-width:767px){.system-bar{min-height:0;padding:7px 12px;border-bottom:0;align-items:center}.system-brand{font-size:16px;gap:5px}.system-brand img{width:23px;height:23px}}
+@media(max-width:767px){.system-bar{min-height:0;padding:7px 12px;border-bottom:2px solid var(--ink);align-items:center}.system-brand{font-size:16px;gap:5px}.system-brand img{width:23px;height:23px}}
