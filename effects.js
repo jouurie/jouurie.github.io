@@ -30,11 +30,9 @@
 (() => {
   'use strict';
   const palette=['--pink','--accent','--lemon','--page','--paper','--blush'];
-  const reducedMotion=matchMedia('(prefers-reduced-motion:reduce)');
-  reducedMotion.addEventListener('change',event=>{if(event.matches)clear();});
+  // Keep the requested cursor hearts active independently of page motion preferences.
   const hearts=[];let timer=null,lastSpawn=0,lastTouch=0;
   function spawn(x,y,count=1){
-    if(reducedMotion.matches)return;
     const colors=getComputedStyle(document.documentElement);
     for(let i=0;i<count;i++){
       if(hearts.length>=8)hearts.shift().node.remove();
